@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafael Costa | Desenvolvedor Front-End</title>
+    <meta name="description"
+        content="Site para Portfólio pessoal do desenvolvedor Rafael Costa, demonstrando todas as tecnologias que utiliza em seus projetos profissional">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="imagem/logo.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#home"><img src="imagem/logo.png" title="logo"></a>
+            </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="animado inicio" id="home" data-anim="zoom-in">
+        <video class="videoback" src="imagem/intro.mp4" autoplay muted loop></video>
+        <div class="conteudo">
+            <h1>Rafael Costa</h1>
+            <h2>Desenvolvedor Front-End | Criação de sites</h2>
+            <p>Pronto para transformar o seu negócio?</p>
+        </div>
+    </section>
+
+
+    <section class="animado section-inicio" id="inicio" data-anim="fade-up">
+        <video class="videoback" src="imagem/negocio.mp4" autoplay muted loop></video>
+        <div class="inicio-conteudo">
+            <h1 class="fade-in">Transforme seu negócio!</h1>
+            <p class="fade-in-delay">Empresas que investem em presença online vendem até <strong>3x mais</strong> do que
+                seus concorrentes.</p>
+
+            <div class="estatisticas">
+                <div class="estatistica-item">
+                    <h3 data-contar="72">0</h3>
+                    <p>Dos clientes confiam mais em empresas que possuem um site próprio.</p>
+                </div>
+                <div class="estatistica-item">
+                    <h3 data-contar="57">0</h3>
+                    <p>Não recomendam negócios sem presença online.</p>
+                </div>
+                <div class="estatistica-item">
+                    <h3 data-contar="50">0</h3>
+                    <p>Mais chances de fechar vendas com um site bem projetado.</p>
+                </div>
+            </div>
+
+            <a href="#projetos" class="botao-cta">Veja meus projetos</a>
+        </div>
+    </section>
+
+    <div class="perfil animado" id="sobre" data-anim="zoom-in">
+        <div class="intro">
+            <h2 class="fade-in">Quem é Rafael?</h2>
+            <section class="paragrafo">
+                <p>
+                    Natural de Recife, Pernambuco, Rafael traz em sua trajetória quase uma década de experiência no
+                    universo
+                    da tecnologia.
+                    À frente de assistências técnicas especializadas em produtos Apple, desenvolveu um olhar aguçado
+                    para
+                    inovação, qualidade e excelência no atendimento.
+                </p>
+                <p>
+                    Movido pela paixão por tecnologia, encontrou na programação e no desenvolvimento de sites uma nova
+                    forma de criar
+                    experiências digitais.
+                    Hoje, atua como desenvolvedor front-end, unindo estética e funcionalidade em cada projeto, e
+                    incorporando Inteligência Artificial para elevar o nível das entregas.
+                </p>
+                <p>
+                    Mais do que criar sites, Rafael entende as dores de quem empreende — afinal, também é empresário e
+                    sabe
+                    que um site bem feito é uma ponte direta entre o cliente e o sucesso.
+                </p>
+                <p>
+                    Transformar ideias em realidades digitais é a missão de Rafael, que une confiança, excelência e
+                    velocidade para impulsionar empresas no mundo online.
+                </p>
+                <blockquote>
+                    <strong>Curiosidades:</strong> Torcedor apaixonado do Sport Recife, Rafael também é músico desde os
+                    12
+                    anos, influenciado por seu pai — o primeiro guitarrista de Alceu Valença.
+                    Sua paixão por Blues e Jazz molda a maneira como encara a vida: com autenticidade, sensibilidade e a
+                    certeza de que nada tem valor se não for compartilhado com quem amamos.
+                </blockquote>
+            </section>
+            <div class="iconestec">
+                <img src="imagem/html.png" title="HTML" alt="html">
+                <img src="imagem/css.png" title="CSS" alt="css">
+                <img src="imagem/js.png" title="JavaScript" alt="js">
+                <img src="imagem/type.png" title="TypeScript" alt="ts">
+                <img src="imagem/react.png" title="React" alt="react">
+            </div>
+        </div>
+
+        <div class="imagem">
+            <img src="imagem/capa.jpg" alt="Rafael Costa">
+        </div>
+    </div>
+
+    <section class="animado projetos-container" id="projetos" data-anim="fade-left">
+        <h2>Projetos</h2>
+        <p>Aqui você encontrará alguns dos meus trabalhos mais recentes, com foco em performance, estética e
+            acessibilidade.</p>
+
+        <div class="carrossel-wrapper">
+            <button class="btn-seta esquerda" id="btn-esquerda">&#10094;</button>
+
+            <div class="carrossel-container" id="carrossel">
+                <!-- Cards -->
+                <div class="card">
+                    <img src="imagem/cardapio.png" alt="Cardapio">
+                    <div class="descricao">
+                        <h3>Cardápio</h3>
+                        <p>Cardápio desenvolvido com React e JavaScript, com filtro para pesquisa de pratos.</p>
+                        <a href="#"><img src="imagem/setabranca.png" alt="seta">Ver Projeto</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="imagem/sorveteria.png" alt="Cardapio">
+                    <div class="descricao">
+                        <h3>Sorveteria</h3>
+                        <p>Site para Sorveteria criado com React, utilizando AppRouter.</p>
+                        <a href="#"><img src="imagem/setabranca.png" alt="seta">Ver Projeto</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="imagem/otica.jpeg" alt="Ótica">
+                    <div class="descricao">
+                        <h3>Ótica</h3>
+                        <p>Site para Ótica utilizando React, para melhor escalabilidade.</p>
+                        <a href="#"><img src="imagem/setabranca.png" alt="seta">Ver Projeto</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="imagem/cafeteria.png" alt="Cafeteria">
+                    <div class="descricao">
+                        <h3>Cafeteria</h3>
+                        <p>Site institucional de uma cafeteria, criado com HTML e CSS, utilizando iFrame.</p>
+                        <a href="#"><img src="imagem/setabranca.png" alt="seta">Ver Projeto</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="imagem/servidor.png" alt="Servidor">
+                    <div class="descricao">
+                        <h3>Servidor</h3>
+                        <p>Site para apresentação de serviço de hospedagem, criado com HTML e CSS.</p>
+                        <a href="#"><img src="imagem/setabranca.png" alt="seta">Ver Projeto</a>
+                    </div>
+                </div>
+
+
+
+                <!-- Adicione mais cards aqui -->
+            </div>
+
+            <button class="btn-seta direita" id="btn-direita">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="depoimentos" data-anim="zoom-in" class="animado testimonials-section">
+        <h2>O que dizem sobre meu trabalho</h2>
+        <div class="carousel">
+            <div class="carousel-track">
+                <!-- Cards serão inseridos via JS -->
+            </div>
+        </div>
+    </section>
+
+
+    <section class="rodape animado" id="contato" data-anim="zoom-in">
+        <h2>Contato</h2>
+        <p>Entre em contato para discutirmos ideias,
+            projetos ou oportunidades de colaboração!</p>
+        <nav class="containerLinks">
+            <a class="links" href="https://wa.me/5581996343413" target=" target=" _blank">
+                <img src="imagem/wapp.png" title="Whatsapp">Whatsapp</a>
+            <a class="links" href="https://www.instagram.com/sitesdomago" target=" target=" _blank">
+                <img src="imagem/insta.png" title="Instagram">Instagram</a>
+            <a class="links" href="https://linkedin.com/in/rafael-costa-4827b9338" target=" target=" _blank">
+                <img src="imagem/linkedin.png" title="Linkedin">LinkedIn</a>
+            <a class="links" href="https://github.com/costafrafael" target=" target=" _blank">
+                <img src="imagem/github.png" title="GitHub">GitHub</a>
+        </nav>
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
