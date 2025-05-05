@@ -355,14 +355,14 @@ section {
     gap: 20px;
     position: absolute;
     right: 15%;
-    bottom: 32%;
+    bottom: 52%;
 }
 
 .rodape h2 {
     color: #db9a11;
     font-size: 28px;
     position: absolute;
-    top: 35%;
+    top: 20%;
     right: 45%;
 }
 
@@ -372,6 +372,7 @@ section {
     font-size: 14px;
     position: absolute;
     right: 12%;
+    top: 30%;
 
 }
 
@@ -595,4 +596,29 @@ section {
 .testimonial-card p {
     font-size: 15px;
     line-height: 1.6;
+}
+
+.rodape iframe {
+    position: absolute;
+    width: 45%;
+    height: 30%;
+    bottom: 15%;
+    right: 10%;
+}
+
+footer img {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 70px;
+    right: 50px;
+    opacity: 50%;
+    transition: transform 0.5s ease;
+    border-radius: 50%;
+    box-shadow: 0 15px 30px rgba(17, 67, 42, 0.65);
+}
+
+footer img:hover {
+    transform: scale(1.3);
+    opacity: 100%;
 }
