@@ -101,6 +101,8 @@ html {
 video {
     position: absolute;
     pointer-events: none;
+    user-select: none;
+    touch-action: none;
     top: 0;
     left: 0;
     width: 100%;
