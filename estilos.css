@@ -671,6 +671,17 @@ footer img:hover {
     opacity: 100%;
 }
 
+footer p {
+    background-color: #154f88;
+    color: #f9f9f9;
+    text-align: center;
+}
+
+footer span {
+    font-weight: bold;
+    color:#db9a11;
+}
+
 .menu-toggle {
     display: none;
     flex-direction: column;
