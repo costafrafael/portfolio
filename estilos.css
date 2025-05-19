@@ -14,8 +14,8 @@ html {
 #header {
     position: fixed;
     top: 5%;
-    left: 25%;
-    width: 50%;
+    left: 20%;
+    width: 60%;
     height: 90px;
     background-image: linear-gradient(86.3deg, rgba(0, 119, 182, 1) 3.6%, rgba(8, 24, 68, 1) 87.6%);
     border-radius: 50px;
@@ -27,17 +27,14 @@ html {
 
 #header.shrink {
     height: 50px;
-    width: 40%;
-    left: 30%;
-    /* altura reduzida */
-    background-color: #142848cc;
-    /* opcional: deixar o fundo mais transparente */
+    width: 30%;
+    left: 35%;
     transform: scale(0.97);
     transition: all 0.5s ease;
 }
 
 #header.shrink nav a {
-    font-size: 14px;
+    font-size: 12px;
     /* diminui a fonte quando shrink */
     transition: all 0.5s ease;
 }
@@ -110,7 +107,7 @@ video {
     object-fit: cover;
     /* Faz o vídeo preencher o espaço sem distorcer */
     z-index: 1;
-    filter: brightness(30%);
+    filter: brightness(40%);
     /* Deixa o vídeo mais escuro */
 }
 
@@ -195,9 +192,8 @@ video {
 .botao-cta {
     text-decoration: none;
     padding: 10px;
-    width: 15%;
-    left: 43%;
-    position: absolute;
+    width: 20%;
+    margin: 0 auto;
     border-radius: 10px;
     font-size: 15px;
     font-weight: 500;
@@ -226,7 +222,7 @@ video {
 .intro {
     flex: 1;
     background-color: #f9f9f9;
-    min-height: 100vh;
+    min-height: auto;
     padding: 70px;
     display: flex;
     flex-direction: column;
@@ -239,6 +235,7 @@ video {
     top: 10%;
     left: 90px;
     color: #db9a11;
+    z-index: 5;
 }
 
 .paragrafo {
@@ -248,6 +245,7 @@ video {
     align-items: center;
     line-height: 18px;
     color: #333;
+    z-index: 5;
 }
 
 .paragrafo p {
@@ -274,6 +272,7 @@ video {
     align-items: center;
     position: relative;
     bottom: 5%;
+    z-index: 5;
 }
 
 .iconestec img {
@@ -352,46 +351,43 @@ section {
 
 .containerLinks {
     display: flex;
-    gap: 20px;
-    position: absolute;
-    right: 15%;
-    bottom: 52%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
 }
 
 .rodape h2 {
     color: #db9a11;
     font-size: 28px;
-    position: absolute;
-    top: 20%;
-    right: 45%;
+    margin-top: 100px;
 }
 
 .rodape p {
-    color: #333;
-    text-align: center;
-    font-size: 14px;
-    position: absolute;
-    right: 12%;
-    top: 30%;
-
+    color: #f9f9f9;
+    max-width: 700px;
+    font-size: 16px;
+    text-shadow:
+        -1px -1px 2px #aaa,
+        1px 1px 2px #000
 }
 
 .rodape {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    background-image: url("imagem/contato2.png");;
-    background-size:contain;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background-image: url("imagem/contato2.png");
+    background-size: cover;
+    background-position: center;
     background-color: #f9f9f9;
-    background-repeat: no-repeat;
-    background-position: left;
+    gap: 20px;
 }
 
 .links {
     text-decoration: none;
-    padding: 10px;
+    padding: 10px 15px;
     border-radius: 50px;
     font-size: 15px;
     font-weight: 400;
@@ -415,13 +411,34 @@ section {
     height: 30px;
 }
 
+.projetos-container p {
+    text-shadow:
+        -1px -1px 2px #aaa,
+        1px 1px 2px #000
+}
+
 .projetos-container {
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    /* ✅ Agora a altura mínima ocupa a tela, mas pode crescer com o conteúdo */
+    padding: 60px 20px;
+    /* ✅ Adiciona respiro interno */
+    box-sizing: border-box;
+    /* ✅ Inclui padding no cálculo do tamanho */
+    display: flex;
+    /* ✅ Centraliza o conteúdo vertical e horizontalmente */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* ✅ Espaçamento entre h2, p e o carrossel */
     background-image: url("imagem/projetos.png");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     color: #f9f9f9;
+    text-align: center;
+    /* ✅ Alinha o texto para telas menores */
 }
 
 .projetos-container h2 {
@@ -430,6 +447,7 @@ section {
 
 .carrossel-wrapper {
     position: relative;
+    width: 100%;
     max-width: 980px;
     margin: 0 auto;
     overflow: hidden;
@@ -500,6 +518,7 @@ section {
     border-radius: 30px;
     display: flex;
     justify-content: center;
+    transition: ease 0.3s;
 }
 
 .card:hover {
@@ -515,6 +534,7 @@ section {
 .card:hover a:hover {
     color: #db9a11;
     font-weight: 400;
+    transform: scale(1.1);
 }
 
 .btn-seta {
@@ -583,9 +603,15 @@ section {
     border-radius: 12px;
 }
 
+.testimonial-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
 .testimonial-card h3 {
-    margin-bottom: 5px;
-    font-size: 18px;
     color: #db9a11;
 }
 
@@ -595,18 +621,22 @@ section {
 }
 
 .testimonial-card p {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.6;
     color: #154f88;
+}
+
+.mapa-container {
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 16 / 9;
     margin-top: 20px;
 }
 
-.rodape iframe {
-    position: absolute;
-    width: 45%;
-    height: 30%;
-    bottom: 15%;
-    right: 10%;
+.mapa-container iframe {
+    width: 80%;
+    height: 80%;
+    border: 0;
 }
 
 footer .fixo {
@@ -636,4 +666,377 @@ footer .logoo {
 footer img:hover {
     transform: scale(1.3);
     opacity: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+}
+
+.menu-toggle img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Media Query para telas pequenas (até 480px) */
+@media (max-width: 480px) {
+
+    .intro h2 {
+        font-size: 1.4rem;
+        margin: auto;
+    }
+
+    .paragrafo {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 0 5px;
+        margin: 10px auto;
+    }
+
+    .intro blockquote {
+        font-size: 12px;
+        padding-left: 10px;
+        margin: 15px 5px;
+    }
+
+    .card {
+        flex: 0 0 50%;
+        max-width: 15%;
+    }
+
+    .projetos-container h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .projetos-container p {
+        font-size: 13px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .descricao h3 {
+        font-size: 16px;
+    }
+
+    .descricao p {
+        font-size: 10px;
+    }
+
+    .descricao a {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+
+    .btn-seta {
+        font-size: 11px;
+        padding: 4px 7px;
+    }
+
+    .testimonials-section h2 {
+        margin-bottom: 100px;
+    }
+
+    .testimonial-card {
+        padding: 10px;
+        flex: 0 0 95% !important;
+        max-width: 100% !important;
+        margin: 0;
+    }
+
+    .testimonial-card h3 {
+        font-size: 16px;
+    }
+
+    .testimonial-card small {
+        font-size: 13px;
+    }
+
+    .testimonial-card p {
+        font-size: 11px;
+    }
+
+    .testimonial-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .inicio-conteudo {
+        height: auto;
+    }
+
+    .inicio-conteudo h1 {
+        font-size: 1.2rem;
+    }
+
+    .inicio-conteudo p {
+        font-size: 0.85rem;
+    }
+
+    .estatistica-item p {
+        font-size: 0.8rem;
+    }
+
+    .estatistica-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .botao-cta {
+        font-size: 0.75rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .rodape h2 {
+        font-size: 22px;
+    }
+
+    .rodape p {
+        font-size: 14px;
+    }
+
+    .links {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .links img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    header ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    header ul.show {
+        display: flex;
+    }
+
+    header li {
+        margin: 10px 0;
+    }
+
+    header a {
+        color: #fff;
+    }
+
+    .inicio-conteudo {
+        padding: 20px;
+    }
+
+    .inicio-conteudo h1 {
+        font-size: 2rem;
+    }
+
+    .inicio-conteudo h3 {
+        margin-bottom: 5px;
+    }
+
+    .inicio-conteudo p {
+        font-size: 1rem;
+    }
+
+    .estatisticas {
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 20px;
+    }
+
+    .estatisticas-item {
+        flex: 1 1 80%;
+    }
+
+    .estatisticas h3 {
+        font-size: 30px;
+        margin: 0;
+    }
+
+    .estatisticas p {
+        font-size: 15px;
+    }
+
+    .botao-cta {
+        width: 60%;
+        align-items: center;
+        font-size: 1rem;
+        max-width: 300px;
+        padding: 12px 25px;
+        box-sizing: border-box;
+    }
+
+    .imagem {
+        display: none;
+    }
+
+    .intro {
+        padding: 0px;
+        background-image: url("imagem/capa.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: auto;
+    }
+
+    .intro h2 {
+        font-size: 1.6rem;
+        top: 50px;
+    }
+
+    .paragrafo {
+        font-size: 12px;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.8);
+        /* 50% escuro */
+        z-index: 1;
+    }
+
+    .card {
+        flex: 0 0 50%;
+        max-width: 15%;
+    }
+
+    .projetos-container h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .projetos-container p {
+        font-size: 14px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .testimonials-section {
+        padding: 40px 15px;
+    }
+
+    .testimonials-section h2 {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+
+    .carousel {
+        width: 95%;
+    }
+
+    .testimonial-card {
+        flex: 0 0 90%;
+        padding: 15px;
+        margin: 0 auto 20px auto;
+        max-width: 90%;
+    }
+
+    .testimonial-card p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .testimonial-img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    header ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    header ul.show {
+        display: flex;
+    }
+
+    header li {
+        margin: 10px 0;
+    }
+
+    header a {
+        color: #fff;
+    }
+
+    .carousel {
+        width: 80%;
+    }
+
+    .testimonial-card {
+        flex: 0 0 45%;
+        height: auto;
+        margin: 0 10px;
+    }
+
+    .testimonial-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .testimonial-card h3 {
+        font-size: 18px;
+    }
+
+    .testimonial-card small {
+        font-size: 14px;
+    }
+
+    .testimonial-card p {
+        font-size: 13px;
+    }
+
 }

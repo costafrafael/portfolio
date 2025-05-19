@@ -20,8 +20,12 @@
             <div class="logo">
                 <a href="#home"><img src="imagem/logo.png" title="logo"></a>
             </div>
-            </div>
-            <ul class="nav-links">
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <img src="imagem/menu.png" title="menubar">
+            </button>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#projetos">Projetos</a></li>
@@ -69,6 +73,7 @@
 
     <div class="perfil animado" id="sobre" data-anim="zoom-in">
         <div class="intro">
+            <div class="overlay"></div>
             <h2 class="fade-in">Quem é Rafael?</h2>
             <section class="paragrafo">
                 <p>
@@ -80,14 +85,16 @@
                     inovação, qualidade e excelência no atendimento.
                 </p>
                 <p>
-                    Movido pela paixão por tecnologia, encontrou na programação e no desenvolvimento de sites uma nova
+                    Movido pela paixão por tecnologia, encontrou na programação e no desenvolvimento de sites uma
+                    nova
                     forma de criar
                     experiências digitais.
                     Hoje, atua como desenvolvedor front-end, unindo estética e funcionalidade em cada projeto, e
                     incorporando Inteligência Artificial para elevar o nível das entregas.
                 </p>
                 <p>
-                    Mais do que criar sites, Rafael entende as dores de quem empreende — afinal, também é empresário e
+                    Mais do que criar sites, Rafael entende as dores de quem empreende — afinal, também é empresário
+                    e
                     sabe
                     que um site bem feito é uma ponte direta entre o cliente e o sucesso.
                 </p>
@@ -96,10 +103,12 @@
                     velocidade para impulsionar empresas no mundo online.
                 </p>
                 <blockquote>
-                    <strong>Curiosidades:</strong> Torcedor apaixonado do Sport Recife, Rafael também é músico desde os
+                    <strong>Curiosidades:</strong> Torcedor apaixonado do Sport Recife, Rafael também é músico desde
+                    os
                     12
                     anos, influenciado por seu pai — o primeiro guitarrista de Alceu Valença.
-                    Sua paixão por Blues e Jazz molda a maneira como encara a vida: com autenticidade, sensibilidade e a
+                    Sua paixão por Blues e Jazz molda a maneira como encara a vida: com autenticidade, sensibilidade
+                    e a
                     certeza de que nada tem valor se não for compartilhado com quem amamos.
                 </blockquote>
             </section>
@@ -126,7 +135,7 @@
             <button class="btn-seta esquerda" id="btn-esquerda">&#10094;</button>
 
             <div class="carrossel-container" id="carrossel">
-                
+
                 <div class="card">
                     <img src="imagem/cardapio.png" alt="Cardapio">
                     <div class="descricao">
@@ -181,7 +190,7 @@
                     </div>
                 </div>
 
-                
+
 
 
 
@@ -204,8 +213,8 @@
 
     <section class="rodape animado" id="contato" data-anim="zoom-in">
         <h2>Contato</h2>
-        <p>Entre em contato para discutirmos ideias,
-            projetos ou oportunidades de colaboração!</p>
+        <p>Projetos incríveis começam com uma boa conversa. 
+            Se você busca resultados de verdade, vamos criar algo grandioso juntos.</p>
         <nav class="containerLinks">
             <a class="links" href="https://wa.me/5581996343413" target=" target=" _blank">
                 <img src="imagem/wapp.png" title="Whatsapp">Whatsapp</a>
@@ -216,8 +225,13 @@
             <a class="links" href="https://github.com/costafrafael" target=" target=" _blank">
                 <img src="imagem/github.png" title="GitHub">GitHub</a>
         </nav>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.5653827584024!2d-34.91278842515141!3d-8.043662780332804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab19033de5dd41%3A0xc2a00eb35efb7900!2sR.%20Vit%C3%B3riano%20Palhares%2C%20250%20-%20Torre%2C%20Recife%20-%20PE%2C%2050710-190!5e0!3m2!1spt-BR!2sbr!4v1746390549641!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        
+        <div class="mapa-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.5653827584024!2d-34.91278842515141!3d-8.043662780332804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab19033de5dd41%3A0xc2a00eb35efb7900!2sR.%20Vit%C3%B3riano%20Palhares%2C%20250%20-%20Torre%2C%20Recife%20-%20PE%2C%2050710-190!5e0!3m2!1spt-BR!2sbr!4v1746390549641!5m2!1spt-BR!2sbr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
     </section>
 
     <footer class="btn-fixo">
