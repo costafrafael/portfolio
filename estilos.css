@@ -772,15 +772,11 @@ footer img:hover {
     }
 
     .inicio-conteudo h1 {
-        font-size: 1.2rem;
+        font-size: 0.85rem !important;
     }
 
     .inicio-conteudo p {
-        font-size: 0.85rem;
-    }
-
-    .estatistica-item p {
-        font-size: 0.8rem;
+        font-size: 0.65rem !important;
     }
 
     .estatistica-item h3 {
@@ -788,8 +784,8 @@ footer img:hover {
     }
 
     .botao-cta {
-        font-size: 0.75rem;
-        padding: 10px 20px;
+        font-size: 0.75rem !important;
+        padding: 5px 5px !important;
     }
 }
 
