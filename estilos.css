@@ -925,6 +925,11 @@ footer span {
         font-size: 12px;
     }
 
+    .iconestec img {
+        height: 30px;
+        width: 30px;
+    }
+
     .overlay {
         position: absolute;
         top: 0;
@@ -1049,6 +1054,21 @@ footer span {
         font-size: 13px;
     }
 
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .iconestec img {
+        width: 40px;
+        height: 40px;
+    }
+    .intro h2 {
+        margin-bottom: 10px;
+    }
+    
+    .paragrafo {
+        font-size: 12px;
+        width: 100%;
+    }
 }
 
 @media (min-width: 1025px) {
