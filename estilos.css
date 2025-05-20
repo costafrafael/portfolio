@@ -37,6 +37,7 @@ html {
     font-size: 12px;
     /* diminui a fonte quando shrink */
     transition: all 0.5s ease;
+    box-sizing: border-box;
 }
 
 #header.shrink img {
@@ -1050,3 +1051,25 @@ footer span {
     }
 
 }
+
+@media (min-width: 1025px) {
+    #header.shrink {
+      width: 45%;
+      left: 27.5%;
+      align-items: center;
+    }
+  
+    #header.shrink .nav-links {
+      gap: 1rem;
+    }
+  
+    #header.shrink .nav-links a {
+      font-size: 12px;
+    }
+  
+    #header.shrink img {
+      width: 25px;
+      height: 25px;
+      left: 10px;
+    }
+  }
