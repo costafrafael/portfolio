@@ -1,10 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const menuToggle = document.getElementById("menu-toggle");
+  const menuToggle = document.getElementById("menu-togglee");
   const navLinks = document.getElementById("nav-links");
 
   if (menuToggle && navLinks) {
     menuToggle.addEventListener("click", function () {
       navLinks.classList.toggle("active"); // Alterna a classe .active
+
+      if (navLinks.classList.contains("active")) {
+        menuToggle.src = "imagem/fechar.png";
+      } else {
+        menuToggle.src = "imagem/menu.png";
+      }
+  
     });
   } else {
     console.warn("Elementos não encontrados: #menu-toggle ou #nav-links");

@@ -235,9 +235,8 @@ video {
 
 .intro h2 {
     font-size: 2.0rem;
-    position: absolute;
+    position: relative;
     top: 10%;
-    left: 90px;
     color: #db9a11;
     z-index: 5;
 }
